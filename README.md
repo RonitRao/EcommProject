@@ -62,7 +62,8 @@ To initialize and audit this front-end module on a local dev environment, execut
 ### Clean Dependencies Installation
 ```bash
 npm install
-
+```
 ### Local Dev Server Initialization
 ```bash
 npm run dev
+```
