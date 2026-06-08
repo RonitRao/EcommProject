@@ -14,13 +14,14 @@ export function ProductGrid() {
 
   return (
     <>
-      <section className="shop-section" id="audio">
+      <section className="shop-section" id="Products">
+        {/* Dynamic Connected Aurora Neon Wave Grid Layer */}
         <div className="aurora-container">
           <div className="aurora-wave-layer"></div>
         </div>
         
         <div className="section-header">
-          <span className="section-tag">Collection Tier</span>
+          <span className="section-tag" style={{ color: '#ffffff', opacity: 0.6, fontSize: '0.85rem', textTransform: 'uppercase', tracking: '2px', letterSpacing: '1px', display: 'block' }}>Collection Tier</span>
           <h2 className="shop-heading">The Inventory.</h2>
         </div>
         
@@ -46,13 +47,16 @@ export function ProductGrid() {
 
       <style>{`
         .shop-section {
-          padding: 6rem 8%;
+          padding: 12rem 8% 6rem 8%;
           background: #0d0e12;
           position: relative;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
           overflow: hidden;
+          min-height: 100vh;
+          box-sizing: border-box;
         }
         
+        /* Master Fluid Background Layer */
         .shop-section .aurora-container {
           position: absolute;
           inset: 0;
@@ -63,16 +67,16 @@ export function ProductGrid() {
         .shop-section .aurora-wave-layer {
           position: absolute;
           inset: -10px;
-          opacity: 0.18;
-          filter: blur(25px);
+          opacity: 0.22;
+          filter: blur(20px);
           will-change: transform;
-          --aurora: repeating-linear-gradient(100deg, #10b981 10%, #6ee7b7 25%, #14b8a6 40%);
-          --dark-gradient: repeating-linear-gradient(100deg, #0d0e12 0%, #0d0e12 6%, transparent 10%, transparent 12%, #0d0e12 16%);
+          --aurora: repeating-linear-gradient(100deg, #10b981 10%, #34d399 15%, #6ee7b7 20%, #2dd4bf 25%, #14b8a6 30%);
+          --dark-gradient: repeating-linear-gradient(100deg, #0d0e12 0%, #0d0e12 7%, transparent 10%, transparent 12%, #0d0e12 16%);
           background-image: var(--dark-gradient), var(--aurora);
           background-size: 300% 200%;
           background-position: 50% 50%;
-          mask-image: radial-gradient(ellipse at 50% 50%, #000 30%, transparent 80%);
-          -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 30%, transparent 80%);
+          mask-image: radial-gradient(ellipse at 50% 0%, #000 20%, transparent 80%);
+          -webkit-mask-image: radial-gradient(ellipse at 50% 0%, #000 20%, transparent 80%);
         }
         .shop-section .aurora-wave-layer::after {
           content: "";
@@ -80,8 +84,14 @@ export function ProductGrid() {
           inset: 0;
           background-image: var(--dark-gradient), var(--aurora);
           background-size: 200% 100%;
+          background-attachment: fixed;
           mix-blend-mode: difference;
-          animation: auroraAnimation 12s linear infinite;
+          animation: auroraAnimation 15s linear infinite;
+        }
+
+        @keyframes auroraAnimation {
+          0% { background-position: 0% 50%, 0% 50%; }
+          100% { background-position: 100% 50%, 100% 50%; }
         }
 
         .section-header {
@@ -91,8 +101,8 @@ export function ProductGrid() {
         }
         .shop-heading {
           color: #fff;
-          font-size: 2.8rem;
-          font-weight: 600;
+          font-size: 3.5rem;
+          font-weight: 700;
           letter-spacing: -1.5px;
           margin: 0.5rem 0 0 0;
         }
@@ -137,7 +147,7 @@ export function ProductGrid() {
         .text-group { flex: 1; }
         .product-title { color: #fff; font-size: 1.15rem; font-weight: 600; margin: 0 0 0.3rem 0; letter-spacing: -0.3px; }
         .product-description { color: #6c7281; font-size: 0.88rem; margin: 0 0 0.8rem 0; line-height: 1.4; max-width: 85%; }
-        .product-cost { color: #ffffff; font-size: 1.1rem; font-weight: 500; }
+        .product-cost { color: #ffffff; font-size: 1.1rem; font-weight: 500; font-family: monospace; }
         .buy-pill-btn {
           background: #ffffff;
           color: #0d0e12;

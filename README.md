@@ -1,6 +1,6 @@
 # AURA. — Modular High-Fidelity Front-End E-Commerce System
 
-An architectural showcase of a modern, ultra-premium digital storefront interface. Built using **React 18** and **Vite**, `AURA.` implements high-end visual design systems—including procedural motion fields, complex CSS text-shadow geometry, and decoupled lifecycle-aware event triggers—without relying on heavy third-party graphic dependencies.
+An architectural showcase of a modern, ultra-premium digital storefront interface. Built using **React 18**, **React Router v6**, and **Vite**, `AURA.` implements a fully decoupled client-side routing environment, high-end visual design systems—including synchronized fluid neon wave animation engines—and state-isolated interactive component views.
 
 ---
 
@@ -8,14 +8,14 @@ An architectural showcase of a modern, ultra-premium digital storefront interfac
 
 The interface is engineered around four core pillars of modern front-end engineering:
 
-### 1. Zero-Dependency Graphical Pipelines
-Instead of importing intensive animation libraries (e.g., Framer Motion or Three.js) which bloat production bundle sizes, `AURA.` uses pure CSS hardware-accelerated composite layers. By decoupling structural layouts from motion fields, rendering operations are offloaded directly to the GPU via the `will-change: transform` property.
+### 1. Client-Side Routing and Layout Isolation
+Instead of relying on single-page section stacking or traditional browser hard-reloads, the system implements **Client-Side Routing** via `react-router-dom`. URL paths are parsed instantaneously to mount and unmount viewports (`/`, `/products`, `/wearables`, `/support`) natively without dropping state, resetting tracking properties, or forcing unnecessary network refetches.
 
-### 2. Lifecycled Viewport Observers
-The application orchestrates viewport entrance transitions through a unified **Intersection Observer API** loop inside `App.jsx`. Rather than attaching expensive event listeners to the window scroll handler (which causes layout thrashing and drops frame rates), the system natively queries the browser layout subsystem only when element thresholds change.
+### 2. Zero-Dependency Unified Motion Fields
+To maximize performance and keep bundle sizes ultra-lean, `AURA.` avoids heavy third-party motion libraries. Instead, every distinct page route hosts a synchronized, hardware-accelerated **Aurora Neon Wave Engine** running on the GPU. Linear repeating gradient matrices are shifted continuously via CSS keyframes to serve as a consistent aesthetic backbone across different layouts.
 
-### 3. Isolated Scoped Shadow Cascades
-To guarantee structural components remain self-contained and modular, visual layouts utilize scoped string literals within component boundaries. This prevents side-effects in global style cascades, allowing individual layout files to be dropped into any standard production workspace seamlessly.
+### 3. Isolated Scoped Style Cascades
+To guarantee structural components remain self-contained and modular, visual layouts utilize scoped style sheets and string literals enclosed directly within component boundaries. This prevents side effects in global style cascades, allowing files to be dropped into any standard production workspace seamlessly.
 
 ---
 
@@ -25,33 +25,39 @@ To guarantee structural components remain self-contained and modular, visual lay
 ECOMMPROJECT/
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.jsx        # Glassmorphic blurs and responsive top navigation header
-│   │   ├── Hero.jsx          # Cinematic landing layout with an absolute motion field
-│   │   ├── Categories.jsx    # Complex text-shadow rendering and asymmetric bento matrices
-│   │   ├── ProductGrid.jsx   # State-isolated retail matrix with reactive click handlers
+│   │   ├── Navbar.jsx        # Fixed glassmorphic header leveraging declarative Router Links
+│   │   ├── Hero.jsx          # Cinematic landing viewport with absolute motion fields
+│   │   ├── Categories.jsx    # Fluid bento matrices with custom high-contrast headings
+│   │   ├── ProductGrid.jsx   # State-isolated retail inventory over active neon fields
+│   │   ├── Wearables.jsx     # Premium 2x2 asymmetric telemetry hardware product showcase
+│   │   ├── Support.jsx       # Glassmorphic user dashboard desk service concierge hub
 │   │   └── Footer.jsx        # Monolithic multi-column architectural rows
-│   ├── App.jsx               # Intersection engine hook and lifecycle orchestration
-│   └── main.jsx              # Global execution environment configurations & normalization
+│   ├── App.jsx               # Central Route definition tree mapping isolated paths
+│   └── main.jsx              # BrowserRouter mount point and global style normalization
+
 ```
-
----
-
 ## 🎨 Visual Journey & Component Breakdown
 
 ### 1. The Interface Foundation & Motion Engine (`Hero.jsx`)
-The landing viewport introduces a high-end procedural animation system designed to simulate organic, fluid wave motions. This is achieved by combining linear repeating gradient bands shifted across two asynchronous keyframe timelines running at unequal prime frequencies (`15s` and `20s`) to ensure the design loops without repetitive patterns.
+The landing viewport introduces a high-end procedural animation system designed to simulate organic, fluid wave motions. This is achieved by combining linear repeating gradient bands shifted across two asynchronous keyframe timelines running at unequal prime frequencies to ensure the design loops without repetitive patterns.
 
-![Hero Showcase Preview](src/assets/hero-preview.png)
+![Hero Showcase Preview](hero-preview.jpg)
 
 ### 2. High-Contrast Asymmetric Matrices (`Categories.jsx`)
 The bento grid architecture breaks traditional layout symmetry to direct user attention dynamically. The challenge of text readability over varied photography layers is addressed mathematically via multiple overlapping font shadows.
 
-![Bento Grid Preview](src/assets/bento-grid.png)
+![Bento Grid Preview](bento-grid.jpg)
 
-### 3. Interactive Inventory Hub
+### 3. Interactive Inventory Hub (`ProductGrid.jsx`)
 Presents the central storefront matrix displaying premium hardware. Each distinct product layout card features custom pricing typography, clean layouts, and a dedicated, responsive `Buy` action pill button.
 
-![Product Inventory Matrix](src/assets/product-inventory.png)
+![Product Inventory Matrix](product-inventory.jpg)
+
+### 4. Biomechanical Wearables Suite (`/wearables`)
+An advanced, highly vivid **2x2 structural grid** exhibiting premium monitoring gear. This view overrides default image compression layers to render product photography at high display luminance profiles (`opacity: 0.90`) while leveraging interactive border-glow transitions on selection.
+
+### 5. Interactive System Concierge Terminal (`/support`)
+A secure, centered glassmorphic communication block wrapped within blurred composite parameters (`backdrop-filter: blur(20px)`). Implements custom inputs with real-time text-focus outline borders and a stylized token tracker for simulated setup requests.
 
 ---
 
@@ -59,11 +65,24 @@ Presents the central storefront matrix displaying premium hardware. Each distinc
 
 To initialize and audit this front-end module on a local dev environment, execute the following operational commands within your terminal environment:
 
-### Clean Dependencies Installation
+### Clean Framework Dependencies Installation
+
 ```bash
+
 npm install
+
 ```
-### Local Dev Server Initialization
+### Routing Library Setup
+
 ```bash
+
+npm install react-router-dom
+
+```
+ ### Local Dev Server Initialization
+
+```bash
+
 npm run dev
+
 ```

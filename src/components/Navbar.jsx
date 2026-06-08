@@ -1,19 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function Navbar() {
   return (
     <>
       <nav className="premium-nav">
         <div className="nav-container">
-          <div className="brand-logo">
+          {/* Clicking the Brand Logo will now smoothly reset back to the Home/Vision page */}
+          <Link to="/" className="brand-logo" style={{ textDecoration: 'none' }}>
             AURA<span className="dot">.</span>
-          </div>
+          </Link>
           
           <ul className="nav-links">
-            <li><a href="#vision" className="nav-item">Vision</a></li>
-            <li><a href="#audio" className="nav-item">Audio</a></li>
-            <li><a href="#wearables" className="nav-item">Wearables</a></li>
-            <li><a href="#support" className="nav-item">Support</a></li>
+            <li><Link to="/" className="nav-item">Vision</Link></li>
+            <li><Link to="/products" className="nav-item">Products</Link></li>
+            <li><Link to="/wearables" className="nav-item">Wearables</Link></li>
+            <li><Link to="/support" className="nav-item">Support</Link></li>
           </ul>
 
           <div className="nav-actions">
