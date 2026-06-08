@@ -41,23 +41,27 @@ ECOMMPROJECT/
 ### 1. The Interface Foundation & Motion Engine (`Hero.jsx`)
 The landing viewport introduces a high-end procedural animation system designed to simulate organic, fluid wave motions. This is achieved by combining linear repeating gradient bands shifted across two asynchronous keyframe timelines running at unequal prime frequencies to ensure the design loops without repetitive patterns.
 
-![Hero Showcase Preview](hero-preview.jpg)
+![Hero Showcase Preview](src/assets/hero-preview.png)
 
 ### 2. High-Contrast Asymmetric Matrices (`Categories.jsx`)
 The bento grid architecture breaks traditional layout symmetry to direct user attention dynamically. The challenge of text readability over varied photography layers is addressed mathematically via multiple overlapping font shadows.
 
-![Bento Grid Preview](bento-grid.jpg)
+![Bento Grid Preview](src/assets/bento-grid.png)
 
 ### 3. Interactive Inventory Hub (`ProductGrid.jsx`)
 Presents the central storefront matrix displaying premium hardware. Each distinct product layout card features custom pricing typography, clean layouts, and a dedicated, responsive `Buy` action pill button.
 
-![Product Inventory Matrix](product-inventory.jpg)
+![Product Inventory Matrix](src/assets/product-inventory.png)
 
 ### 4. Biomechanical Wearables Suite (`/wearables`)
 An advanced, highly vivid **2x2 structural grid** exhibiting premium monitoring gear. This view overrides default image compression layers to render product photography at high display luminance profiles (`opacity: 0.90`) while leveraging interactive border-glow transitions on selection.
 
+![Wearables Suite Preview](src/assets/wearables-preview.png)
+
 ### 5. Interactive System Concierge Terminal (`/support`)
 A secure, centered glassmorphic communication block wrapped within blurred composite parameters (`backdrop-filter: blur(20px)`). Implements custom inputs with real-time text-focus outline borders and a stylized token tracker for simulated setup requests.
+
+![Support Terminal Preview](src/assets/support-preview.png)
 
 ---
 
