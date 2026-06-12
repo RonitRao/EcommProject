@@ -129,7 +129,7 @@ export function ProductGrid() {
               <div className="modal-actions-row">
                 <button type="button" className="btn-cancel" onClick={() => setIsModalOpen(false)}>Cancel Terminal</button>
                 <button type="submit" className="btn-submit" disabled={loading}>
-                  {loading ? 'Processing Array...' : 'Deploy to Database'}
+                  {loading ? 'Processing Array...' : 'Add to Inventory'}
                 </button>
               </div>
             </form>
