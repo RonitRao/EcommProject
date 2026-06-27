@@ -6,6 +6,8 @@ import { ProductGrid } from './components/ProductGrid'
 import { Wearables } from './components/Wearables' 
 import { Support } from './components/Support'     
 import { Footer } from './components/Footer'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 
 export default function App() {
   return (
@@ -54,6 +56,27 @@ export default function App() {
           element={
             <>
               <Support />
+              <Footer />
+            </>
+          } 
+        />
+
+        {/* 5. ISOLATED AUTHENTICATION PAGES */}
+        <Route 
+          path="/login" 
+          element={
+            <>
+              <Login />
+              <Footer />
+            </>
+          } 
+        />
+
+        <Route 
+          path="/signup" 
+          element={
+            <>
+              <Signup />
               <Footer />
             </>
           } 
